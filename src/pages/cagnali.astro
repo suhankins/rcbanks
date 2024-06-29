@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ERROR">
+    <h1 class="pixelated">ERROR</h1>
+    <footer class="pixelated">
+        Reboot and set recovery option in the control panel system or the system
+        BIOS at intallation/CRASHDEBUG. If message reappears contact your system
+        administrator.
+    </footer>
+</Layout>
+
+<style>
+    body {
+        background-image: url('/error.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100dvh;
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        text-align: center;
+        width: min-content;
+        padding: 10px 20px;
+        margin: 0;
+        background-color: #75e8cc;
+        color: #000000;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        font-size: 52px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        color: #75e8cc;
+        font-size: 24px;
+        text-align: center;
+    }
+</style>
