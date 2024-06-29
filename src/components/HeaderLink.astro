@@ -7,7 +7,7 @@ interface Props {
 const { name, link } = Astro.props;
 ---
 
-<a href="https://example.com/">
+<a href={link}>
     <img src=`/icons/${name}.gif` alt="" />
     <div class="text"><slot /></div>
 </a>
