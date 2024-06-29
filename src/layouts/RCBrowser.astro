@@ -1,0 +1,36 @@
+---
+import Header from '../components/Header.astro';
+import SearchBar from '../components/SearchBar.astro';
+import Layout from './Layout.astro';
+---
+
+<Layout title="RCBrowser!">
+    <Header />
+    <main>
+        <div class="survey pixelated">
+            <a
+                href="https://steamcommunity.com/app/2933080/discussions/0/6536492883954066679/"
+                >Take a survey</a
+            > - Chance to win $1.000.
+        </div>
+        <SearchBar />
+        <slot />
+        <footer>
+            This website is not affiliated with INGAME STUDIOS or 505 Games. If
+            devs want this domain, they can contact me via links above. If you
+            have ideas for this website, contact me via links above or Discord.
+        </footer>
+    </main>
+</Layout>
+
+<style>
+    .survey {
+        text-align: center;
+        font-size: 28px;
+    }
+    main {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
