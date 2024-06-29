@@ -1,11 +1,9 @@
-<form class="pixelated">
+<form class="pixelated" data-form="" action="/search">
     <label>
         Search for
-        <input name="search" type="search" />
+        <input name="search" type="search" data-input="" />
     </label>
-    <button>
-        on the web
-    </button>
+    <button>on the web</button>
     <ul>
         <li>
             <a href="#">Advanced</a>
@@ -15,6 +13,31 @@
         </li>
     </ul>
 </form>
+
+<script>
+    (document.querySelector('[data-input]') as HTMLInputElement).value =
+        new URLSearchParams(window.location.search).get('search') || '';
+
+    document
+        .querySelector('[data-form]')
+        ?.addEventListener('submit', (event: Event) => {
+            if (
+                !(event instanceof SubmitEvent) ||
+                !(event.target instanceof HTMLFormElement)
+            ) {
+                return;
+            }
+            const formData = new FormData(event.target);
+            if (
+                formData.get('search')?.toString().toLowerCase().trim() !==
+                'rockay bank security holes'
+            ) {
+                return;
+            }
+            event.preventDefault();
+            window.location.replace('/cagnali');
+        });
+</script>
 
 <style>
     form {
@@ -30,7 +53,7 @@
         padding: 10px;
         height: 90px;
     }
-    
+
     ul {
         padding-left: 16px;
     }
@@ -39,7 +62,9 @@
         display: inline-block;
     }
 
-    input, button, label {
+    input,
+    button,
+    label {
         font-family: inherit;
         font-size: 32px;
         height: 100%;
