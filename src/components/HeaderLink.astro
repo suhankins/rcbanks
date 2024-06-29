@@ -1,0 +1,28 @@
+---
+interface Props {
+    name: string;
+    link: string;
+}
+
+const { name, link } = Astro.props;
+---
+
+<a href="https://example.com/">
+    <img src=`/icons/${name}.gif` alt="" />
+    <div class="text"><slot /></div>
+</a>
+
+<style>
+    img {
+        display: block;
+        width: 100%;
+    }
+    .text {
+        text-align: center;
+    }
+    a {
+        display: inline-block;
+        width: 72px;
+        vertical-align: top;
+    }
+</style>

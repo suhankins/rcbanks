@@ -1,0 +1,47 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="RCBrowser! Your best friend on Rockay City Internet!"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
+<style is:global>
+    html {
+        font-family: 'Times New Roman', Times, serif;
+        background: #ffffff;
+    }
+
+	.red-bullet li {
+		list-style: url('/redball.gif') inside;
+	}
+
+    .red-bullet li::marker {
+        width: 16px;
+    }
+
+    @font-face {
+        font-family: 'Windows';
+        src: url('/fonts/windows.ttf');
+    }
+
+    .pixelated {
+        font-family: 'Windows';
+    }
+</style>

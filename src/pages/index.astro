@@ -1,0 +1,100 @@
+---
+import Header from '../components/Header.astro';
+import SearchBar from '../components/SearchBar.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+    <Header />
+    <main>
+        <div class="survey pixelated">
+            <a href="https://example.com/">Take a survey</a> - Chance to win $1.000.
+        </div>
+        <SearchBar />
+        <div class="lists">
+            <ul class="red-bullet">
+                <li class="section-title">
+                    <a href="https://www.youtube.com/watch?v=K_9W5prULlg"
+                        ><b>Business and economy</b> - <i
+                            >Directory, Banks, Investments</i
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a href="http://rcbank.org/">http://rcbank.org</a>
+                </li>
+                <li>
+                    <a href="http://rdr.net/">http://rdr.net</a>
+                </li>
+                <li>
+                    <a href="http://usanatbank.net/">http://usanatbank.net</a>
+                </li>
+                <li class="section-title">
+                    <a href="https://rockay.fans/"
+                        ><b>Computers and Internet</b> - <i
+                            >Internet, Software, Multimedia</i
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a href="https://rockay.fans/">http://rockay.fans</a>
+                </li>
+                <li>
+                    <a href="/free">http://wizgaming.com</a>
+                </li>
+                <li>
+                    <a href="https://modworkshop.net/g/crimeboss">http://coolrockaymods.com</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=qY-jqdJQxpQ"
+                        >http://cagnali.org</a
+                    >
+                </li>
+                <li class="section-title">
+                    <a href="/"
+                        ><b>This website</b> - <i>Created by</i></a
+                    >
+                </li>
+                <li>
+                    <a href="https://github.com/suhankins"
+                        >Punished Bernadetta</a
+                    >
+                </li>
+                <li>
+                    <a href="mailto:berna@detta.dev">berna@detta.dev</a>
+                </li>
+                <li>
+                    <a href="https://example.com/">TODO: GitHub repo</a>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            This website is not affiliated with INGAME STUDIOS or 505 Games. If
+            devs want this domain, they can contact me via links above. If you
+            have ideas for this website, contact me via links above or Discord.
+        </footer>
+    </main>
+</Layout>
+
+<style>
+    .survey {
+        text-align: center;
+        font-size: 28px;
+    }
+    main {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .lists {
+        margin-top: 100px;
+    }
+    li {
+        font-size: 24px;
+    }
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+</style>
